@@ -1,31 +1,23 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Product from './components/Product'
-
-import products from './products'
+import HomeScreen from './screens/HomeScreen'
+import ProductScreen from './screens/ProductScreen'
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
       <main>
         <Container>
-        <h1>Latest Products</h1>
-        <Row>
-          {products.map(product => (
-            <Col key={product._id} sm={12} md={6} lg={4} xl={3}> 
-              <Product product={product} />
-            </Col>
-          ))}
-          
-        </Row>
+          <Route path="/" component={HomeScreen} exact />
+          <Route path="/products/:id" component={ProductScreen} />
         </Container>
-        
       </main>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
