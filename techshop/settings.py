@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'corsheaders',
     'rest_framework',
+
+    'shop.apps.ShopConfig',
 ]
 
 MIDDLEWARE = [
