@@ -6,7 +6,7 @@ function Footer() {
         <footer>
             <Container>
                 <Row>
-                    <Col className="text-center py-3">Copyright &copy; techShop </Col>
+                    <Col className="text-center py-3">Copyright &copy; {new Date().getFullYear()} techShop </Col>
                 </Row>
             </Container>
         </footer>
