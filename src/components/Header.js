@@ -5,14 +5,14 @@ import { Container, Navbar, Nav } from 'react-bootstrap'
 function Header() {
     return (
         <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
+          <Navbar bg="dark" variant="dark" expand="lg" collapsible="true">
             <Container>
-              <Navbar.Brand href="#home">TechShop</Navbar.Brand>
+              <Navbar.Brand href="/">TechShop</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                  <Nav.Link href="#home">Home</Nav.Link>
-                  <Nav.Link href="#link">Link</Nav.Link>
+                  <Nav.Link href="/cart">Cart</Nav.Link>
+                  <Nav.Link href="/login">Login</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
